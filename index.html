@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mony - Bot de Discord</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ff8fc1;
+            --secondary-color: #ffe6f0;
+            --text-color: #333;
+            --header-color: #fff;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { background-color: var(--secondary-color); color: var(--text-color); }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 20px;
+            text-align: center;
+            color: var(--header-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header h1 { font-size: 2.5em; }
+
+        nav {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            transition:0.3s;
+        }
+
+        nav a:hover { color: #ff5588; }
+
+        section { padding: 60px 20px; max-width:1000px; margin:0 auto; }
+
+        section h2 { color: var(--primary-color); margin-bottom: 20px; text-align:center; font-size:2em; }
+
+        .section-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .commands-list { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+        .command { background-color: var(--secondary-color); padding:15px; border-radius:10px; width:200px; text-align:center; transition:0.3s; }
+        .command:hover { transform: translateY(-5px); box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+
+        .creator-info { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+        .creator-card { background-color: var(--secondary-color); padding:15px; border-radius:10px; width:200px; text-align:center; transition:0.3s; }
+        .creator-card:hover { transform: translateY(-5px); box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+
+        footer { text-align:center; padding:20px; background-color: var(--primary-color); color: var(--header-color); }
+
+        .btn-invite {
+            display:inline-block;
+            margin-top:15px;
+            padding:10px 20px;
+            background-color:#ff5588;
+            color:#fff;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+        .btn-invite:hover { background-color:#ff77aa; }
+
+        @media(max-width:600px){
+            .commands-list, .creator-info { flex-direction:column; align-items:center; }
+            nav { flex-direction:column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-robot"></i> Mony</h1>
+        <p>Seu bot de Discord favorito 💖</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#comandos">Comandos</a>
+    </nav>
+
+    <!-- Seção Início -->
+    <section id="inicio">
+        <h2>Sobre o Bot</h2>
+        <div class="section-content">
+            <p>Mony é um bot de Discord feito para tornar seu servidor mais divertido e interativo. Com comandos de entretenimento, utilidade, RPG e economia, ele é perfeito para qualquer comunidade.</p>
+        </div>
+
+        <h2>Sobre o Criador</h2>
+        <div class="section-content creator-info">
+            <div class="creator-card">
+                <i class="fas fa-user"></i>
+                <h3>asafgamer</h3>
+                <p>Entusiasta de bots e criador de Mony,Desenvolvedor de jogos, dedicado a fazer o dia das pessoas.</p>
+            </div>
+        </div>
+
+        <h2>Suporte e Convite</h2>
+        <div class="section-content" style="text-align:center;">
+            <p>Precisa de ajuda ou quer adicionar Mony ao seu servidor?</p>
+            <a href="https://discord.com/oauth2/authorize?client_id=SEU_CLIENT_ID&scope=bot&permissions=8" class="btn-invite">
+                <i class="fas fa-plus-circle"></i> Adicionar Mony
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Comandos -->
+    <section id="comandos">
+        <h2>Todos os Comandos</h2>
+        <div class="section-content commands-list">
+
+            <!-- Diversão -->
+            <h3 style="color:#ff8fc1; text-align:center; margin-bottom:15px;">Diversão</h3>
+            <div class="command"><i class="fas fa-user"></i><h4>!apresentar</h4><p>Apresenta o usuário no servidor.</p></div>
+            <div class="command"><i class="fas fa-handshake"></i><h4>!amizade</h4><p>Faz amizade com outro usuário.</p></div>
+            <div class="command"><i class="fas fa-heart"></i><h4>!ship</h4><p>Verifica afinidade entre dois usuários.</p></div>
+            <div class="command"><i class="fas fa-heart-broken"></i><h4>!trair</h4><p>Brincadeira de traição entre usuários.</p></div>
+            <div class="command"><i class="fas fa-comment"></i><h4>!say</h4><p>Faz o bot repetir algo que você digitar.</p></div>
+            <div class="command"><i class="fas fa-hug"></i><h4>!abraçar</h4><p>Abraça outro usuário.</p></div>
+            <div class="command"><i class="fas fa-kiss"></i><h4>!beijo</h4><p>Manda um beijo para outro usuário.</p></div>
+            <div class="command"><i class="fas fa-bomb"></i><h4>!nuclear</h4><p>Comando de efeito divertido.</p></div>
+            <div class="command"><i class="fas fa-location-arrow"></i><h4>!tp</h4><p>Teleporta para outro usuário.</p></div>
+            <div class="command"><i class="fas fa-question"></i><h4>!seila</h4><p>Comando surpresa/divertido.</p></div>
+            <div class="command"><i class="fas fa-dice"></i><h4>!roletarussa</h4><p>Jogo de roleta russa divertida.</p></div>
+            <div class="command"><i class="fas fa-heart"></i><h4>!ship2</h4><p>Outra forma de verificar afinidade.</p></div>
+            <div class="command"><i class="fas fa-hand-paper"></i><h4>!ppt</h4><p>Pedra, papel ou tesoura com o bot.</p></div>
+
+            <!-- Geral -->
+            <h3 style="color:#ff8fc1; text-align:center; margin-bottom:15px;">Geral</h3>
+            <div class="command"><i class="fas fa-info-circle"></i><h4>*helpl</h4><p>Lista de ajuda 1.</p></div>
+            <div class="command"><i class="fas fa-info-circle"></i><h4>*help2</h4><p>Lista de ajuda 2.</p></div>
+            <div class="command"><i class="fas fa-info-circle"></i><h4>*help3</h4><p>Lista de ajuda 3.</p></div>
+            <div class="command"><i class="fas fa-info-circle"></i><h4>*help</h4><p>Lista de ajuda principal.</p></div>
+            <div class="command"><i class="fas fa-info-circle"></i><h4>*help4</h4><p>Lista de ajuda 4.</p></div>
+
+            <!-- Administração -->
+            <h3 style="color:#ff8fc1; text-align:center; margin-bottom:15px;">Administração</h3>
+            <div class="command"><i class="fas fa-ban"></i><h4>!ban</h4><p>Bane um usuário do servidor.</p></div>
+            <div class="command"><i class="fas fa-door-open"></i><h4>!kick</h4><p>Expulsa um usuário do servidor.</p></div>
+            <div class="command"><i class="fas fa-flag"></i><h4>!denunciar</h4><p>Denuncia um usuário.</p></div>
+            <div class="command"><i class="fas fa-plus"></i><h4>!criar_canal</h4><p>Cria um novo canal no servidor.</p></div>
+            <div class="command"><i class="fas fa-id-badge"></i><h4>!id</h4><p>Mostra o ID de um usuário.</p></div>
+
+            <!-- Economia -->
+            <h3 style="color:#ff8fc1; text-align:center; margin-bottom:15px;">Economia</h3>
+            <div class="command"><i class="fas fa-atm"></i><h4>!atm</h4><p>Mostra saldo bancário.</p></div>
+            <div class="command"><i class="fas fa-briefcase"></i><h4>!workk</h4><p>Trabalhar e ganhar dinheiro.</p></div>
+            <div class="command"><i class="fas fa-hand-holding-usd"></i><h4>!pay</h4><p>Paga outro usuário.</p></div>
+            <div class="command"><i class="fas fa-running"></i><h4>!working</h4><p>Trabalhar em tempo real.</p></div>
+            <div class="command"><i class="fas fa-wallet"></i><h4>!depositar</h4><p>Deposita dinheiro no banco.</p></div>
+
+            <!-- RPG -->
+            <h3 style="color:#ff8fc1; text-align:center; margin-bottom:15px;">RPG</h3>
+            <div class="command"><i class="fas fa-id-card"></i><h4>!perfil</h4><p>Mostra seu perfil RPG.</p></div>
+            <div class="command"><i class="fas fa-box"></i><h4>!itens</h4><p>Mostra seus itens RPG.</p></div>
+            <div class="command"><i class="fas fa-tree"></i><h4>!madeira</h4><p>Coleta madeira.</p></div>
+            <div class="command"><i class="fas fa-backpack"></i><h4>!inv</h4><p>Abre seu inventário.</p></div>
+            <div class="command"><i class="fas fa-gem"></i><h4>!pedra</h4><p>Coleta pedra.</p></div>
+            <div class="command"><i class="fas fa-store"></i><h4>!lojar</h4><p>Abre loja do servidor.</p></div>
+            <div class="command"><i class="fas fa-shopping-cart"></i><h4>!comprar_rpg</h4><p>Compra itens RPG.</p></div>
+            <div class="command"><i class="fas fa-coins"></i><h4>!vender_rpg</h4><p>Vende itens RPG.</p></div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mony Bot | Criado por @asafgamer_123 no discord, e  @asafgamery no Instagram</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
